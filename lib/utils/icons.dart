@@ -1,0 +1,1 @@
+const menu = 'assets/aside/menu.svg';
