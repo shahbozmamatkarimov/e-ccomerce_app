@@ -1,0 +1,10 @@
+D:/StartUP/E-commerce/app/ecommerce_front/build/windows/x64/CMakeFiles/INSTALL.dir
+D:/StartUP/E-commerce/app/ecommerce_front/build/windows/x64/CMakeFiles/ALL_BUILD.dir
+D:/StartUP/E-commerce/app/ecommerce_front/build/windows/x64/CMakeFiles/ZERO_CHECK.dir
+D:/StartUP/E-commerce/app/ecommerce_front/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+D:/StartUP/E-commerce/app/ecommerce_front/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_app.dir
+D:/StartUP/E-commerce/app/ecommerce_front/build/windows/x64/flutter/CMakeFiles/flutter_assemble.dir
+D:/StartUP/E-commerce/app/ecommerce_front/build/windows/x64/flutter/CMakeFiles/INSTALL.dir
+D:/StartUP/E-commerce/app/ecommerce_front/build/windows/x64/runner/CMakeFiles/ecommerce_front.dir
+D:/StartUP/E-commerce/app/ecommerce_front/build/windows/x64/runner/CMakeFiles/INSTALL.dir
+D:/StartUP/E-commerce/app/ecommerce_front/build/windows/x64/runner/CMakeFiles/ALL_BUILD.dir
