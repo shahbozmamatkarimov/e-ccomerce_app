@@ -7,7 +7,7 @@ void main() {
   runApp(const MyApp());
 }
 
-String selectedPage = '';
+String selectedPage = ''; 
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
