@@ -7,7 +7,7 @@ void main() {
   runApp(const MyApp());
 }
 
-String selectedPage = ''; 
+String selectedPage = '';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
     // GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-    // double screenWidth = MediaQuery.of(context).size.width;
+    double screenWidth = MediaQuery.of(context).size.width;
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
               SizedBox(
                 height: 60,
                 child: Container(
-                  width: 363,
+                  width: screenWidth > 780 ? 363 : screenWidth - 72,
                   height: 36,
                   padding:
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
                   child: SearchBar(
                     padding: const MaterialStatePropertyAll<EdgeInsets>(
                         EdgeInsets.symmetric(horizontal: 16.0)),
-                    hintText: "Search",
+                    hintText: "Search $screenWidth",
                     backgroundColor: MaterialStateProperty.all<Color?>(
                       const Color(0xFFFFFFFF),
                     ),
@@ -178,7 +178,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Container(
-              width: 363,
+              width: screenWidth > 780 ? 363 : screenWidth - 72,
               padding: const EdgeInsets.symmetric(horizontal: 16),
               color: const Color(0xFF0D0F23),
               child: ListView.builder(
@@ -301,6 +301,7 @@ class Category extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return SizedBox(
       height: 80,
       child: Row(
@@ -317,35 +318,37 @@ class Category extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 15),
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                width: 260,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  // crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Text(
-                      'Muddatli to’lov asosida',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w600,
+              Expanded(
+                child: SizedBox(
+                  width: screenWidth > 780 ? 260 : screenWidth - 175,
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    // crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(
+                        'Muddatli to’lov asosida',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
-                    ),
-                    Text(
-                      '18:16',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w400,
+                      Text(
+                        '18:16',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: 4),
