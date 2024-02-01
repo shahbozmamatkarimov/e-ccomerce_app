@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
                   child: SearchBar(
                     padding: const MaterialStatePropertyAll<EdgeInsets>(
                         EdgeInsets.symmetric(horizontal: 16.0)),
-                    hintText: "Search $screenWidth",
+                    hintText: "Search",
                     backgroundColor: MaterialStateProperty.all<Color?>(
                       const Color(0xFFFFFFFF),
                     ),
@@ -322,37 +322,35 @@ class Category extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
-                child: SizedBox(
-                  width: screenWidth > 780 ? 260 : screenWidth - 175,
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    // crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Text(
-                        'Muddatli to’lov asosida',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w600,
-                        ),
+              SizedBox(
+                width: screenWidth > 780 ? 260 : screenWidth - 175,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      'Muddatli to’lov asosida',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w600,
                       ),
-                      Text(
-                        '18:16',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w400,
-                        ),
+                    ),
+                    Text(
+                      '18:16',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w400,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-              SizedBox(height: 4),
-              Text(
+              const SizedBox(height: 4),
+              const Text(
                 "You: i don't remember anything 😄",
                 style: TextStyle(
                   color: Colors.white,
